@@ -84,3 +84,12 @@ MIT
 | npm/pnpm | ~/.npmrc | 阿里云 npm |
 | Maven | ~/.m2/settings.xml | 阿里云 Maven |
 | Gradle | ~/.gradle/gradle.properties | 阿里云 Maven |
+
+## 私有仓库配置
+
+| 工具 | 配置 | 仓库 |
+|------|------|------|
+| pip | ~/.pip/pip.conf | 阿里云 PyPI 私有 |
+| npm/pnpm | ~/.npmrc | 阿里云 npm 私有 |
+| Maven | ~/.m2/settings.xml | 阿里云 Maven 私有 |
+| Gradle | ~/.gradle/gradle.properties | 阿里云 Maven 私有 |
