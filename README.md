@@ -75,3 +75,12 @@ ubuntu-dev/
 ## License
 
 MIT
+
+## 国内镜像配置
+
+| 工具 | 配置 | 镜像源 |
+|------|------|--------|
+| pip | ~/.pip/pip.conf | 阿里云 PyPI |
+| npm/pnpm | ~/.npmrc | 阿里云 npm |
+| Maven | ~/.m2/settings.xml | 阿里云 Maven |
+| Gradle | ~/.gradle/gradle.properties | 阿里云 Maven |
