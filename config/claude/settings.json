@@ -1,6 +1,6 @@
 {
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "2G9fKnHzzFtVZsWmoTApZBUW5w0crnTuXUVznw9Unvd8KJuSZpe8HUpX1WueIn1LZ",
+    "ANTHROPIC_AUTH_TOKEN": "CHANGEME",
     "ANTHROPIC_BASE_URL": "https://api.stepfun.com/step_plan"
   },
   "model": "step-3.7-flash",
