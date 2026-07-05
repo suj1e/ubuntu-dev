@@ -2,7 +2,7 @@
 
 Ubuntu Server 开发环境配置（zsh + starship + mise）。
 
-和 macOS/Windows 工具链对齐：eza/bat/fd/rg/delta/zoxide/fzf/lazygit/just/jq/btop/dust/procs/tldr/yq/direnv/lazydocker/hyperfine/sd/xh。
+和 macOS/Windows 工具链对齐：eza/bat/fd/rg/delta/zoxide/fzf/lazygit/just/jq/btop/dust/procs/tldr/yq/direnv/lazydocker/hyperfine/sd/xh/pnpm/maven/gradle。
 
 ## 快速开始
 
