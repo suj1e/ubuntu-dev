@@ -62,14 +62,25 @@ alias ltree='eza -T --icons --level=3'
 alias l2='eza -T --icons --level=2'
 alias l1='eza -T --icons --level=1'
 
-# bat — 语法高亮 cat
-alias cat='bat --paging=never'
-alias less='bat --paging=always'
+# bat — 语法高亮 cat（Ubuntu 上为 batcat）
+if command -v bat &>/dev/null; then
+    alias cat='bat --paging=never'
+    alias less='bat --paging=always'
+elif command -v batcat &>/dev/null; then
+    alias cat='batcat --paging=never'
+    alias less='batcat --paging=always'
+fi
 
-# fd — 现代 find
-alias find='fd'
-alias fname='fd --glob'
-alias ffull='fd --fixed-strings'
+# fd — 现代 find（Ubuntu 上为 fdfind）
+if command -v fd &>/dev/null; then
+    alias find='fd'
+    alias fname='fd --glob'
+    alias ffull='fd --fixed-strings'
+elif command -v fdfind &>/dev/null; then
+    alias find='fdfind'
+    alias fname='fdfind --glob'
+    alias ffull='fdfind --fixed-strings'
+fi
 
 # ripgrep — 现代 grep
 alias grep='rg'

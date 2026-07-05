@@ -22,15 +22,15 @@
 
 ## 1. 工具清单
 
-### 已安装工具（apt + mise）
+### 已安装工具（apt + mise + cargo）
 
 | 工具 | 版本 | 用途 | 安装方式 |
 |------|------|------|----------|
 | **zsh** | 最新 | Shell | apt |
 | **starship** | 最新 | Prompt | 官方脚本 |
 | **eza** | 最新 | 现代 ls | apt |
-| **bat** | 最新 | 语法高亮 cat | apt |
-| **fd** | 最新 | 现代 find | apt (fd-find) |
+| **bat** | 最新 | 语法高亮 cat | apt（二进制名为 batcat） |
+| **fd** | 最新 | 现代 find | apt (fd-find，二进制名为 fdfind) |
 | **ripgrep** | 最新 | 现代 grep | apt |
 | **delta** | 最新 | Git diff 美化 | apt (git-delta) |
 | **zoxide** | 最新 | 智能目录跳转 | mise |
@@ -40,8 +40,8 @@
 | **jq** | 最新 | JSON 处理 | apt |
 | **lnav** | 最新 | 日志查看器 | apt |
 | **btop** | 最新 | 系统监控 | apt |
-| **dust** | 最新 | 磁盘占用分析 | apt |
-| **procs** | 最新 | 进程列表 | mise |
+| **dust** | 最新 | 磁盘占用分析 | cargo |
+| **procs** | 最新 | 进程列表 | cargo |
 | **tldr** | 最新 | 简化版手册 | apt |
 | **yq** | 最新 | YAML 处理 | mise |
 | **direnv** | 最新 | 目录级环境变量 | apt |
@@ -85,9 +85,9 @@ bash ~/ubuntu-dev/scripts/install.sh
 | `ll` | `eza -l --icons --git --group-directories-first` | 详细列表 |
 | `la` | `eza -la --icons --git --group-directories-first` | 显示隐藏文件 |
 | `lt` | `eza -T --icons` | 树形视图 |
-| `cat` | `bat --paging=never` | 语法高亮 |
-| `less` | `bat --paging=always` | 语法高亮分页 |
-| `find` | `fd` | 现代 find |
+| `cat` | `bat` / `batcat` | 语法高亮（Ubuntu 上为 batcat） |
+| `less` | `bat` / `batcat` | 语法高亮分页（Ubuntu 上为 batcat） |
+| `find` | `fd` / `fdfind` | 现代 find（Ubuntu 上为 fdfind） |
 | `grep` | `rg` | 现代 grep |
 | `lg` | `lazygit` | Git TUI |
 | `vim` | `nvim` | Neovim |
@@ -334,9 +334,12 @@ exec zsh
 
 | macOS | Ubuntu | 说明 |
 |------|------|------|
-| brew | apt + mise | 包管理不同 |
+| brew | apt + mise + cargo | 包管理不同 |
 | zsh | zsh | 一致 |
 | starship | starship | 一致 |
+| bat | batcat | apt 包名为 bat，二进制名为 batcat |
+| fd | fdfind | apt 包名为 fd-find，二进制名为 fdfind |
+| dust/procs | cargo 编译安装 | apt 无包，mise 依赖 GitHub 下载 |
 | mise | mise | 一致 |
 | Ghostty | 无（SSH 客户端） | 服务器无 GUI |
 | 其他工具 | 基本一致 | 跨平台工具版本一致 |

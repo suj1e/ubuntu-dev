@@ -45,7 +45,7 @@ ubuntu-dev/
 |------|------|------|
 | Shell | zsh | 和 macOS 一致 |
 | Prompt | starship | 和 macOS 一致 |
-| 包管理 | apt + mise | apt 装系统工具，mise 装语言和 CLI 工具 |
+| 包管理 | apt + mise + cargo | apt 装系统工具，mise 装语言和 CLI 工具，cargo 装 dust/procs |
 | 版本管理 | mise | 和 macOS 一致 |
 
 ## 和 macOS 的区别
@@ -54,7 +54,10 @@ ubuntu-dev/
 |------|-------|---------------|
 | 终端 | Ghostty | SSH 客户端（本地终端） |
 | Shell | zsh | zsh（一致） |
-| 包管理 | brew | apt + mise |
+| 包管理 | brew | apt + mise + cargo |
+| bat 命令 | bat | batcat（apt 包名为 bat，二进制为 batcat） |
+| fd 命令 | fd | fdfind（apt 包名为 fd-find，二进制为 fdfind） |
+| dust/procs | mise 安装 | 通过 cargo 编译安装 |
 | 其他 | 完全一致 | 完全一致 |
 
 ## 服务器特有工具
