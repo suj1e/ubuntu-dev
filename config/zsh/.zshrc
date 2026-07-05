@@ -8,6 +8,10 @@
 export EDITOR="nvim"
 export PYTHONIOENCODING="utf-8"
 
+# Claude Code API
+export ANTHROPIC_AUTH_TOKEN="2G9fKnHzzFtVZsWmoTApZBUW5w0crnTuXUVznw9Unvd8KJuSZpe8HUpX1WueIn1LZ"
+export ANTHROPIC_BASE_URL="https://api.stepfun.com/step_plan"
+
 # mise 初始化
 export PATH="$HOME/.local/share/mise/shims:$PATH"
 

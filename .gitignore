@@ -9,3 +9,13 @@ Thumbs.db
 # SSH 密钥（不纳入 git）
 .ssh/
 !config/ssh/config
+
+# Claude Code 运行时数据
+.claude/history.jsonl
+.claude/cache/
+.claude/sessions/
+.claude/telemetry/
+.claude/backups/
+.claude/plugins/
+.claude/shell-snapshots/
+.claude/projects/

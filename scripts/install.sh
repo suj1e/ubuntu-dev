@@ -102,6 +102,19 @@ if [ "$SHELL" != "$(which zsh)" ]; then
 fi
 
 # ============================================
+# 配置 Claude Code
+# ============================================
+echo ""
+echo "配置 Claude Code..."
+if [ ! -f ~/.claude/settings.json ]; then
+    mkdir -p ~/.claude
+    cp config/claude/settings.json ~/.claude/settings.json
+    echo "  ✓ Claude settings.json 已复制"
+else
+    echo "  ℹ️  Claude settings.json 已存在，跳过"
+fi
+
+# ============================================
 # 完成
 # ============================================
 echo ""
@@ -112,5 +125,6 @@ echo "  1. 重启 shell: exec zsh"
 echo "  2. 配置 starship: cp config/starship/starship.toml ~/.config/starship/"
 echo "  3. 配置 git: cp config/git/gitconfig ~/.gitconfig"
 echo "  4. 配置 SSH: cp config/ssh/config ~/.ssh/config"
-echo "  5. 运行 'mise install' 安装所有语言版本"
+echo "  5. 配置 Claude: cp config/claude/settings.json ~/.claude/"
+echo "  6. 运行 'mise install' 安装所有语言版本"
 echo ""
